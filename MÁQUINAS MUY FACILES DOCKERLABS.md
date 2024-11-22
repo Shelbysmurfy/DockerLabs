@@ -102,9 +102,26 @@ Conseguimos acceso como root.
 
 # RESOLUCIÓN DE LA MÁQUINA VACACIONES
 
+Abrimos el código fuente de la página y nos encontramos con esta pista: 
 
+![image](https://github.com/user-attachments/assets/d270dca1-1557-4cc8-a582-ab9b001db7f2)
 
+Hacemos hydra con los dos usuarios pero solo uno de ellos nos devuelve respuesta.
 
+![image](https://github.com/user-attachments/assets/da3521a4-4b33-4d3c-bb78-18788dcd8fed)
 
+En el mensaje del código fuente nos dice que ha enviado un correo al usuario camilo, así que vamos a verlo.
+
+![image](https://github.com/user-attachments/assets/cae2f31c-8149-4808-b128-87fc041fe411)
+
+Nos conectamos como el usuario juan con las credenciales obtenidas, hacemos sudo -l y seguimos los pasos del GTFObins.
+
+![image](https://github.com/user-attachments/assets/0d2f53b3-07fa-40a7-b131-e2cfa9c2fd98)
+
+![image](https://github.com/user-attachments/assets/8670767b-7935-4bb6-ab79-bfdfb87f31bc)
+
+Y ya somos root.
+
+![image](https://github.com/user-attachments/assets/f1620fb4-82c4-4776-ad4b-b316ecbcbbab)
 
 
