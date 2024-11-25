@@ -1,5 +1,7 @@
 # RESOLUCIÓN DE LA MÁQUINA ANONYMOUSPINGU
 
+Abrimos la máquina y vemos su IP.
+
 ![image](https://github.com/user-attachments/assets/88d6cf8c-7f6b-4ca2-b247-502438d93406)
 
 Hacemos un nmap para poder ver los puertos que estan abiertos para la IP seleccionada.
