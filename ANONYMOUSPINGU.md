@@ -12,7 +12,7 @@ Ahora hacemos un escaneo de los puertos que hemos visto que estan abiertos para 
 
 ![image](https://github.com/user-attachments/assets/8899abdc-cf77-4e81-82f5-e79ef3fe546b)
 
-Entramosn en el servicio ftp.
+Entramos en el servicio ftp.
 
 ![image](https://github.com/user-attachments/assets/b02c4e3a-69c2-4233-8958-39c6c8bbf2f1)
 
