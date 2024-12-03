@@ -84,6 +84,10 @@ Nos vamos al archivo maintenance.py y le cambiamos el contenido, ya que pertenec
 
 ![image](https://github.com/user-attachments/assets/5882fe67-e94e-440f-a550-54dbdbda64b4)
 
+Con esto también nos valdría: 
+
+![image](https://github.com/user-attachments/assets/06926e04-a944-46c3-841a-75d422eaa683)
+
 Y ya somos root.
 
 ![image](https://github.com/user-attachments/assets/8396fcf5-d0f4-49ed-bb2b-f6059651fae3)
