@@ -58,7 +58,7 @@ Tenemos 3 posibles usuarios.
 
 ![image](https://github.com/user-attachments/assets/173dc692-8101-4e3a-9e7b-289ef54c9c1f)
 
-Nos vamos al login y vemos que el usuario correcto el el joe.
+Nos vamos al login y vemos que el usuario correcto es el joe.
 
 ![image](https://github.com/user-attachments/assets/38a128e1-84ea-4565-aed4-36d496afd22b)
 
