@@ -1,5 +1,7 @@
 # RESOLUCIÓN DE LA MÁQUINA AGUADEMAYO
 
+Abrimos la máquina y vemos su IP.
+
 ![image](https://github.com/user-attachments/assets/d2c33c5d-4e80-4f87-bb3d-b90b1b5e8e55)
 
 Hacemos un nmap para poder ver los puertos que estan abiertos para la IP seleccionada.
