@@ -1,5 +1,7 @@
 # RESOLUCIÓN DE LA MÁQUINA BACKEND
 
+Abrimos la máquina y vemos su IP.
+
 ![image](https://github.com/user-attachments/assets/f189ca1d-c8c7-476a-9977-b0ef8d965ade)
 
 Hacemos un nmap para poder ver los puertos que estan abiertos para la IP seleccionada.
