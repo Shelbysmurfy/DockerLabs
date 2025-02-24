@@ -58,5 +58,24 @@ Creamos un archivo.zip malicioso (muy parecido al pentest_monkey), y lo subimos.
 
 Lo activamos mientras estamos en escucha desde la terminal y ganamos acceso.
 
+![image](https://github.com/user-attachments/assets/859a7951-05fd-47c3-ae9c-454870e5ba67)
+
+Miramos los permisos SUID y vemos esto: 
+
+![image](https://github.com/user-attachments/assets/5ede39e5-1eef-43f9-b553-690e34f93bb3)
+
+Ya que gawk es SUID, probaremos modificar el archivo /etc/passwd haciendo una copia en el directorio /tmp/.
+
+Editaremos esa copia y eliminaremos la "x" del usuario root para que, al autenticarnos como root, no se nos solicite una contraseña.
+
+![imagen_2025-02-24_120233265](https://github.com/user-attachments/assets/ba5f6595-cd9b-48df-b02b-ca7768dc937f)
+
+Y ya somos root.
+
+![image](https://github.com/user-attachments/assets/36148ad0-83f8-4aeb-b53a-d3f2faf798aa)
+
+![imagen_2025-02-24_120538634](https://github.com/user-attachments/assets/d93637e9-0591-41a0-bf6c-f362aea11988)
+
+
 
 
