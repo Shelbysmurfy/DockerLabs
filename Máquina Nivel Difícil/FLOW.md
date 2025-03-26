@@ -46,6 +46,10 @@ Así que volvemos a burpsuite y si hacemos un find de el usuario flow encontramo
 
 ![image](https://github.com/user-attachments/assets/a25384c8-dd3c-4fc9-a7ee-e04ddd41d122)
 
+Vamos a la de /usr/bin/secert, y encontramos una posible credencial codificada.
+
+![image](https://github.com/user-attachments/assets/665c68d3-3a30-4f60-8563-0220f2878047)
+
 Vamos a cyberchef y desencriptamos el código que hemos obtenido.
 
 ![image](https://github.com/user-attachments/assets/1588aa23-471b-49a0-bbfc-4df9a9bdebfc)
@@ -62,3 +66,36 @@ Hacemos un sudo -l y vemos esto:
 
 ![image](https://github.com/user-attachments/assets/3c1aad7d-0920-47ca-a08a-b6d2c8eb999e)
 
+Lo ejecutamos y vemos esto: 
+
+![image](https://github.com/user-attachments/assets/3750594d-97f6-4e3e-8f87-4b6cb6c5646b)
+
+Nos traemos el archivo manager a nuestra máquina.
+
+![image](https://github.com/user-attachments/assets/e32e149f-b629-4818-920e-813695072a6b)
+
+Lo abrimos con ghidra.
+
+![image](https://github.com/user-attachments/assets/58f721a4-1417-4554-839a-0c83b2e401b4)
+
+Vemos que en la función main(), se crea un buffer de 76 bytes, y luego se nos pide un input que luego se almacena en ese buffer. Para almacenarlo se usa fgets(), pero no se usa de forma segura, ya que se le pasa como máximo de bytes 80, por lo que podemos sobrescribir 4 bytes en el stack.
+
+Luego, local_c, que es un int, se compara con 0x726f6f74, que en ASCII es "root". Si es igual, se llama a una función que escribe datos en un archivo, y luego se llama a otra función que nos va a permitir ejecutar comandos.
+
+El buffer de nuestro input está abajo del todo, y encima esta local_c, que es un int de 4 bytes. Entonces si escribimos 76 bytes, los siguientes 4 bytes sobrescriben local_c, ya que está encima. Si sobrescribimos local_c con 0x726f6f74, ganamos la ejecución de comandos.
+
+Creamos la cadena de 80 carácteres con los 4 últimos con la palabra root, pero al ejecutarlo no funciona.
+
+![image](https://github.com/user-attachments/assets/2d878e05-d6eb-4e98-8115-0b267bf3622d)
+
+![image](https://github.com/user-attachments/assets/1918f2f8-fd3e-4d1f-b2e4-6a88ea4d32a6)
+
+Probamos a poner root al revés ya que se trata de un archivo LSB y nos funciona correctamente.
+
+![image](https://github.com/user-attachments/assets/e320003e-67bf-4042-97dc-3aafe088c9a6)
+
+![image](https://github.com/user-attachments/assets/0590be0d-753f-4037-9eb9-5844f0038103)
+
+Una vez dentro encontramos la segunda flag, la del usuario root.
+
+![image](https://github.com/user-attachments/assets/c18e3b38-16eb-4e70-a825-e4c07f183209)
